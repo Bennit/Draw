@@ -1,0 +1,21 @@
+div(class="lobby-column")
+	div(class="lobby-column-top")
+		h2 Register nickname
+		p
+			input#register-nickname(type="text",autofocus="autofocus")
+		div(class="lobby-problem")
+			#lobby-register-problem
+	
+	#action-register(class="button") Register
+		
+div(class="lobby-column lobby-split")
+
+div(class="lobby-column")
+	div(class="lobby-column-top")
+		h2 Why register?
+		ul
+			li Create sessions
+			li Save&Load sessions
+			
+	a#action-go-login back to login
+script(src="/javascripts/loaders/register.js")

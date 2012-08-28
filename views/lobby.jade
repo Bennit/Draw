@@ -1,0 +1,13 @@
+#lobby(class="window")
+    div(class="lobby vcenter hcenter")
+
+        div(class="lobby-logo")
+            img(src="/images/logo.png")
+
+        #loader(class="lobby-inner vcenter hcenter")
+            img(src="/images/loader.gif")
+
+        #lobby-inner(class="lobby-inner",style="display:none;")
+            include login
+
+script(src='/javascripts/loaders/lobby.js')

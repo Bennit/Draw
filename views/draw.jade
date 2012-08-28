@@ -1,0 +1,66 @@
+script
+    var guest = #{user.guest};
+#draw(class="window")
+  div(class="top")
+    div(class="menu")
+      #action-leave(class="menu-item button") Leave
+      #action-export(class="menu-item button") Export
+      #action-clear(class="menu-item button") Clear
+      if !user.guest
+        #action-save(class="menu-item button") Save
+        div(class="menu-item")
+            input#save-name(type="value",value="untitled")
+        div(class="menu-item")
+            #last-save
+          
+  div(class="bottom")
+    div(class="panel")
+
+      div(class="panel-sub")
+        h2 Tools
+        #tools(style="height:75px;")
+      
+      div(class="panel-sub")
+        h2 Properties
+        table#properties
+            tr(class="panel-setting")
+                td Size
+                td(class="mid")
+                    input#size(type="number",class="number",value="1",min="1",max="10")
+                td
+                    #size-example(class="line-example")
+            tr(class="panel-setting")
+                td Color
+                td(class="mid")
+                    input#color(type="text",class="color",value="black")
+                td
+                    #color-example(class="color-example")
+            tr(class="panel-setting")
+                td Fill
+                td(class="mid")
+                    input#fill(type="text",class="color",value="transparent")
+                td
+                    #fill-example(class="color-example")
+   
+      #chatbox(class="panel-sub")
+        h2 Chat
+        #users
+        #chatbox-messages
+        input#chatbox-input
+
+      #tooltip
+        
+    div(class="canvas-out")
+      #table(style="display:none)
+      
+script(src="/javascripts/loaders/chat.js")
+script(src="/javascripts/loaders/draw.js")
+
+script(src="/javascripts/tools/Dot.js")
+script(src="/javascripts/tools/Line.js")
+script(src="/javascripts/tools/Rectangle.js")
+script(src="/javascripts/tools/Ellipse.js")
+script(src="/javascripts/tools/Polygon.js")
+script(src="/javascripts/tools/Selection.js")
+
+script Draw.init(#{width},#{height},!{JSON.stringify(shapes)});

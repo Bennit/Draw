@@ -1,0 +1,18 @@
+{
+  "name": "Draw",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+      "express": "2.5.10"
+    , "jade": ">= 0.0.1"
+    , "now": "git://github.com/Bennit/now.git"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "author": "Ben Corne <ben.corne@gmail.com> (http://bennit.be)",
+  "description": "Draw some shizzle",
+  "homepage": "http://draw.bennit.be"
+}

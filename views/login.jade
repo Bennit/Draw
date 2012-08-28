@@ -1,0 +1,21 @@
+div(class="lobby-column")
+  div(class="lobby-column-top")
+    h2 Nickname
+    p
+      input#nickname(type="text",autofocus="autofocus")
+    div(class="lobby-problem")
+      #lobby-login-problem
+  #action-login(class="button") Log in
+
+div(class="lobby-column lobby-split")
+
+div(class="lobby-column")
+  div(class="lobby-column-top")
+    h2 No account?
+    p
+      a#action-go-register register account
+    p &nbsp;&nbsp;or
+    span (join session only)
+  #action-guest-login(class="button") Draw as guest
+  #guest-login-problem
+script(src='/javascripts/loaders/login.js')

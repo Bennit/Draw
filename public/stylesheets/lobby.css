@@ -1,0 +1,127 @@
+#loader {
+    /* the loader's image dimensions */
+    width:220px;
+    height:119px;/* 19px + 100px from banner */
+    border:0;
+}
+
+div.lobby {
+	width:640px;
+	height:350px;
+}
+
+div.lobby-logo {
+	height:100px;
+}
+
+div.lobby-inner {
+	height:250px;
+	border:1px black solid;
+}
+div.lobby-column {
+	height:250px;
+	width:300px;
+	text-align:center;
+	float:left;
+}
+div.lobby-column-top {
+	height: 150px;
+}
+div.lobby-split {
+	width:0px;
+	height:190px; /* 250 - 60 */
+	margin:30px 10px 30px 10px; /* top right bottom left */
+	border:2px black solid;
+}
+div.lobby .button {
+	width:200px;
+	height:30px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:5px;
+	padding-top:5px;
+	font-size:20px;
+}
+div.lobby a, div.lobby a:hover {
+	text-decoration:underline;
+	color:blue;
+	cursor:pointer;
+}
+div.lobby-problem {
+	height:20px;
+}
+span.lobby-problem {
+	color:red;
+	font-size:16px;
+	padding:2px;
+}
+div.lobby input {
+	width:200px;
+	font-size:20px;
+	text-align:center;
+	padding:5px;
+}
+
+/* LOGIN */
+div.lobby-nickname {
+}
+div.lobby-guest {
+	height: 150px;
+}
+div.lobby ul {
+	text-align:left;
+}
+
+/* LOGGED IN */
+div.lobby div.label {
+	width:50px;
+	height:38px;
+	padding-top:8px;
+	font-size:20px;
+	float:left;
+}
+
+div.lobby p {
+    font-size:16px;
+}
+
+/* SESSIONS */
+div.lobby-join {
+	text-align:center;
+	float:left;
+	width:320px;
+	height:250px;
+}
+
+div.lobby-sessions {
+	height:200px;
+}
+div.sessions {
+	height:180px;
+	overflow-y:auto;
+}
+div.draw-tables {
+    height:100px;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+div.draw-table {
+    width:275px;
+    padding:3px;
+    font-size:14px;
+    cursor:pointer;
+}
+div.draw-table:hover {
+    border:1px black solid;
+    padding:2px;
+}
+div.draw-table:nth-child(even){
+    background-color:skyblue;
+}
+div.draw-table:nth-child(odd){
+    background-color:lightgrey;
+}
+/* LOAD */
+#lobby-load div.draw-tables {
+    height:150px;
+}

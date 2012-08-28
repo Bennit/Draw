@@ -1,0 +1,53 @@
+div(class="lobby-column")
+    div(class="lobby-column-top")
+        h2 Welcome, #{user.nickname}
+        if user.guest
+            p Guests cannot load saved tables.          
+        #action-create(class="button") New drawing table
+        if !user.guest
+            #action-load(class="button") Load saved table
+        #action-join(class="button") Join session
+        #action-logout(class="button") Log out
+      
+div(class="lobby-column lobby-split")
+
+#lobby-create
+    div(class="lobby-column")
+        div(class="lobby-column-top")
+            h2 Create new drawing table
+            div
+                div(class="label") Width
+                input#create-width(type="number",value="800",step="50",min="0",max="800")
+                | (px)
+            div(style="clear:both;")
+            div
+                div(class="label") Height
+                input#create-height(type="number",value="600",step="50",min="0",max="640")
+                | (px)
+        #action-create-confirm(class="button") Start drawing!
+
+#lobby-join(style="display:none;")
+    div(class="lobby-column")
+        div(class="lobby-column-top")
+            h2 Click session to join
+            div(class="draw-tables")
+                #join-tables
+        #action-refresh(class="button") Refresh
+        
+if !user.guest
+    #lobby-load(style="display:none;")
+        div(class="lobby-column")
+            div(class="lobby-column-top")
+                h2 Load drawing table
+                div#load-tables(class="draw-tables")
+                    if user.tables.length == 0
+                        p The Sistine Chapel Ceiling is under construction.
+                        p You'll see your creations in this list when you save them.
+                    else
+                        each table, idx in user.tables
+                            div(class="draw-table")
+                                | #{table.name} (#{table.width}x#{table.height})
+#lobby-problem-wrapper
+    #lobby-problem
+
+script(src="/javascripts/loaders/loggedin.js")

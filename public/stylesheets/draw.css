@@ -1,0 +1,130 @@
+/* MENU */
+div.menu {
+  height:100%;
+  width:100%;
+}
+div.menu-item {
+  float:left;
+  margin:11px;
+  font-size:20px;
+}
+div.menu-item.button {
+  padding:5px;
+}
+div.menu-item > input {
+  height:30px;
+  padding-left:5px
+}
+div.menu-item > input:focus {
+  border:1px #FFA500 solid;
+}
+div.menu-item > span {
+  height:30px;
+  padding:5px;
+}
+div.menu > div.button {
+  margin:10px;
+}
+/* PANEL */
+div.panel {
+  position:absolute;
+  left:0px;
+  width:200px;
+  height:100%;
+  overflow-y:none;
+}
+div.panel-sub {
+  border-bottom:1px black solid;
+}
+div.panel-sub:last-child {
+  border-bottom:0;
+}
+div.panel-item {
+  float:left;
+  text-align:center;
+  width:30px;
+  height:30px;
+  margin:2px;
+  border:1px black solid;
+}
+div.panel-item.button {
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+div.panel-item.button.active{
+  background-color:red;
+  cursor:default;
+}
+tr.panel-setting > td.mid  {
+  width:100px;
+}
+tr.panel-setting input {
+  width:100px;
+  border:1px black solid;
+  text-align:center;
+  float:left;
+}
+div.color-example {
+  width:18px;
+  height:18px;
+  border:1px black solid;
+}
+div.line-example {
+  width:20px;
+  border:0;
+  background-color:black;
+}
+
+div.selection-items {
+  margin-left:10px;
+}
+div.selection-action {
+  float:left;
+  padding:5px;
+  margin-right:5px;
+  
+}
+div.selection-action:last-child {
+  margin-right:0px;
+}
+
+/* CHATBOX */
+#chatbox-messages {
+    height:150px;
+    border:1px black solid;
+    overflow-y:auto;
+}
+#chatbox-messages p {
+    width:180px;
+    word-break:break-all;
+    font-size:12px;
+    font-family:"arial,sans-serif";
+    margin:0;
+}
+#chatbox-input{
+    margin:0;
+    padding:0;
+    width:198px;
+    border:1px black solid;
+}
+/* CANVAS */
+div.canvas-out {
+  position:absolute;
+  right:0px;
+  left:200px;
+  bottom:0px;
+  top:0px;
+  border-left:2px black solid;
+  border-right:2px black solid;
+  overflow:auto;
+}
+
+#table {
+    border:1px black solid;
+}
+canvas {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  /* background-color: rgba(255, 0, 0, 0.4); */
+}

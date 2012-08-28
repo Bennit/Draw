@@ -1,0 +1,35 @@
+!!!
+html
+  head
+    title= title
+    
+    // stylesheets
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/lobby.css')
+    link(rel='stylesheet', href='/stylesheets/draw.css')
+
+    // fonts
+    link(rel='stylesheet', href='/fonts/lordina/stylesheet.css')
+
+    // jQuery
+    script(src='/javascripts/libs/jquery-1.6.2.js')
+    script(src='/javascripts/libs/jquery.center.js')
+    
+    // now.js
+    script(src='/nowjs/now.js')
+
+    // Flapjax
+    script(src='/javascripts/libs/flapjax-2.1.js')
+    script(src='/javascripts/libs/nowfx.client.js')
+    script(src='/javascripts/libs/jquery-flapjax.js')
+    script(src='/javascripts/libs/jquery.fx.js')
+    script(src='/javascripts/libs/flapjax.changeB.js')
+
+    // Other libraries
+    script(src='/javascripts/libs/date.format.js')
+
+  body
+    include lobby
+
+    script
+        jQuery.centerOnLoad();
